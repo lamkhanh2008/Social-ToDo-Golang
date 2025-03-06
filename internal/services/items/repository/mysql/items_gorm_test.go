@@ -3,6 +3,7 @@ package mysql
 import (
 	"context"
 	"log"
+	core "social_todo/internal/common"
 	"social_todo/internal/services/items/entity"
 	"testing"
 
@@ -46,8 +47,8 @@ func TestCreateItem(t *testing.T) {
 		Title:       "Test Item",
 		Description: "Description of test item",
 		UserID:      10,
-		Image: &entity.Images{
-			entity.Image{
+		Image: &core.Images{
+			core.Image{
 				ID: 12,
 			},
 		},
